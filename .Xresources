@@ -1,0 +1,9 @@
+xterm*faceName:DejaVu Sans Mono
+xterm*faceSize: 10
+xterm*saveLines: 16384
+xterm*background:Black
+xterm*foreground:Green
+xterm*loginshell: true
+xterm*ScrollBar: false
+xterm*ScrollKey: true
+xterm*selectToClipboard: true
