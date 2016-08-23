@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Output to monitor
+xrandr --output VGA1 --right-of LVDS1 --mode 1920x1080
+
+#reset wallpaper
+~/.fehbg
+

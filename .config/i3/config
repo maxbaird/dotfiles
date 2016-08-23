@@ -14,7 +14,7 @@
 #font pango: Ubuntu Mono 10 
 
 #Set Wallapaper
-exec --no-startup-id feh --bg-fill /home/maxx/pictures/summertime.jpg
+exec --no-startup-id feh --bg-fill /home/maxx/Pictures/black_hole.jpg
 
 #Start Network Manager
 exec --no-startup-id nm-applet
@@ -132,6 +132,10 @@ bindsym Mod1+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym Mod1+minus scratchpad show
+
+# move workspace to left and right monitors
+bindsym Mod1+Shift+bracketleft move workspace to output left
+bindsym Mod1+Shift+bracketright move workspace to output right
 
 # switch to workspace
 bindsym Mod1+1 workspace 1
