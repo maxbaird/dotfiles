@@ -1,0 +1,15 @@
+In Your Darkest Hour
+
+In the event that your hardware does kick the bucket, or that you simply move on to a newer and faster machine, you might want a little help in getting your files back where they belong. As you wipe back your tears of anguish or joy, clone your repo to the home directory on your new machine.
+
+$ cd ~                                                                          
+$ git clone https://github.com/<your-username>/<repo-name>.git
+
+Now you’ve got your dotfiles in a directory within your home directory. But we actually want those files in your home directory. This includes the .git directory that contains everything Git needs to track your repo. To move your precious files into your home directory and remove the old repo directory, run the following commands.
+
+$ mv <repo-name>/* <repo-name>/.* .                                             
+$ rm -f <repo-name>
+
+Now you’re all set up just like when you had originally created your repo. Your dotfiles are in place on your new machine and you’re ready to roll.
+
+
