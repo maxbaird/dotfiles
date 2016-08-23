@@ -213,7 +213,8 @@ bar {   colors {
 #        urgent_workspace   #1793D1 #333333 #52C0FF
 
 }
-        font pango: Meslo LG M DZ for Powerline, font Awesome 10.5
+        #font pango: Meslo LG M DZ for Powerline, font Awesome 10.5
+        font pango: DejaVu Sans Mono, font Awesome 10.5
         status_command $HOME/bin/conky-i3bar #i3-stastusbar
         tray_output primary
 }
