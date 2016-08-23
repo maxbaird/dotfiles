@@ -47,28 +47,28 @@ TEXT
 
 ####
 
-{ "full_text" : " ${fs_free /home}",  "separator":false, "separator_block_width":8, "color" : ${if_match ${fs_free_perc /home}<=5}       "\#dc322f"  ${else} ${if_match ${fs_free_perc /home}<=10}"\#cb4b16" ${else} ${if_match ${fs_free_perc /home}<=15}"\#b58900"${else} "\#919191" ${endif} ${endif}${endif} },
+{ "full_text" : " ${fs_free /home}",  "separator":false, "separator_block_width":8, "color" : ${if_match ${fs_free_perc /home}<=5}       "\#dc322f"  ${else} ${if_match ${fs_free_perc /home}<=10}"\#cb4b16" ${else} ${if_match ${fs_free_perc /home}<=15}"\#b58900"${else} "\#25d682" ${endif} ${endif}${endif} },
 
-{ "full_text" : " ${fs_free}",  "separator":true, "separator_block_width":15, "color" : ${if_match ${fs_free_perc}<=5}       "\#dc322f"  ${else} ${if_match ${fs_free_perc}<=10}"\#cb4b16" ${else} ${if_match ${fs_free_perc}<=15}"\#b58900"${else} "\#919191" ${endif} ${endif}${endif} },
+{ "full_text" : " ${fs_free}",  "separator":true, "separator_block_width":15, "color" : ${if_match ${fs_free_perc}<=5}       "\#dc322f"  ${else} ${if_match ${fs_free_perc}<=10}"\#cb4b16" ${else} ${if_match ${fs_free_perc}<=15}"\#b58900"${else} "\#25d682" ${endif} ${endif}${endif} },
 
-{ "full_text" : ${if_match ${cpu cpu0}<10} " 0${cpu cpu0}%" ${else} " ${cpu cpu0}%" ${endif},       "separator":false, "separator_block_width":8, "color" : ${if_match ${cpu cpu0}>=90}       "\#dc322f"  ${else} ${if_match ${cpu cpu0}>=85}"\#cb4b16" ${else} ${if_match ${cpu cpu0}>=70}"\#b58900"${else} "\#919191" ${endif} ${endif} ${endif}},
+{ "full_text" : ${if_match ${cpu cpu0}<10} " 0${cpu cpu0}%" ${else} " ${cpu cpu0}%" ${endif},       "separator":false, "separator_block_width":8, "color" : ${if_match ${cpu cpu0}>=90}       "\#dc322f"  ${else} ${if_match ${cpu cpu0}>=85}"\#cb4b16" ${else} ${if_match ${cpu cpu0}>=70}"\#b58900"${else} "\#f65151" ${endif} ${endif} ${endif}},
 
-{ "full_text" : " ${exec ~/bin/cpu_avg_temp.sh}°C",        "separator":false, "separator_block_width":8, "color" : ${if_match ${exec ~/bin/cpu_avg_temp.sh}<=65} "\#919191"     ${else}  ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=75}"\#dc322fc" ${else} ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=70}"\#cb4b16"${else} "\#b58900" ${endif}${endif}  ${endif} },
+{ "full_text" : " ${exec ~/bin/cpu_avg_temp.sh}°C",        "separator":false, "separator_block_width":8, "color" : ${if_match ${exec ~/bin/cpu_avg_temp.sh}<=65} "\#f65151"     ${else}  ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=75}"\#dc322fc" ${else} ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=70}"\#cb4b16"${else} "\#b58900" ${endif}${endif}  ${endif} },
 
-{ "full_text" : " ${memperc}%",        "separator":true, "separator_block_width":15, "color" : ${if_match ${memperc}>90}       "\#dc322f"  ${else} ${if_match ${memperc}>=85}"\#cb4b16" ${else} ${if_match ${memperc}>=70}"\#b58900"${else} "\#919191" ${endif} ${endif}${endif} },
+{ "full_text" : " ${memperc}%",        "separator":true, "separator_block_width":15, "color" : ${if_match ${memperc}>90}       "\#dc322f"  ${else} ${if_match ${memperc}>=85}"\#cb4b16" ${else} ${if_match ${memperc}>=70}"\#b58900"${else} "\#f65151" ${endif} ${endif}${endif} },
 { "full_text" : ${if_up wlp3s0b1} \
                 " "\
                 ${else} 
                 " "\
                 ${endif}
- ,  "separator":false, "separator_block_width":8, "color" : ${if_up wlp3s0b1}"\#919191"${else}"\#dc322f" ${endif} },
+ ,  "separator":false, "separator_block_width":8, "color" : ${if_up wlp3s0b1}"\#1dbb0b"${else}"\#dc322f" ${endif} },
 
 { "full_text" : ${if_up enp2s0}\
                             " "\
                             ${else} " "\
                             ${endif}\
 ,  "separator":true, "separator_block_width":15, "color" :${if_up enp2s0}\
-                            "\#919191"\
+                            "\#1dbb0b"\
                             ${else} "\#dc322f"\
                             ${endif}\
 },
@@ -81,18 +81,18 @@ ${if_match "${exec ~/bin/alsa_conky.sh}"!="muted"}\
     ${else}" ${exec ~/bin/alsa_conky.sh}%"${endif}${endif} ${else}" muted"${endif}\
     ,  "separator":false, "separator_block_width":10, "color" :\
 ${if_match "${exec ~/bin/alsa_conky.sh}"==0}\
-            "\#919191"\
+            "\#f4ff42"\
     ${else} ${if_match ${exec ~/bin/alsa_conky.sh}<=65}\
-            "\#919191"\
+            "\#f4ff42"\
     ${else} ${if_match ${exec ~/bin/alsa_conky.sh}<=85}\
-            "\#919191"\
-    ${else} "\#919191"\
+            "\#f4ff42"\
+    ${else} "\#f4ff42"\
             ${endif}\
             ${endif}\
 ${endif}},
 
 
-{ "full_text" :" ${time %a, %d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#919191" },
+{ "full_text" :" ${time %a, %d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#f4ff42" },
 { "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
 
 
