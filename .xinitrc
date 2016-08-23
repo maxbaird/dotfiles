@@ -23,5 +23,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 exec xautolock -time 5 -locker i3lock-wrapper &
+xrandr --output LVDS1 --primary
 exec i3
 xrdb -merge ~/.Xresources

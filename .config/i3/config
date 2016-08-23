@@ -19,9 +19,6 @@ exec --no-startup-id feh --bg-fill /home/maxx/pictures/summertime.jpg
 #Start Network Manager
 exec --no-startup-id nm-applet
 
-#Set the primary display
-exec --no-startup-id xrandr --output LVDS1 --primary
-
 font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11
@@ -229,4 +226,4 @@ bar {   colors {
 #
 # Please remove the following exec line:
 #######################################################################
-exec i3-config-wizard
+#exec i3-config-wizard
