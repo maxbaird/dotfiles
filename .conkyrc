@@ -55,7 +55,16 @@ TEXT
 
 { "full_text" : " ${exec ~/bin/cpu_avg_temp.sh}°C",        "separator":false, "separator_block_width":8, "color" : ${if_match ${exec ~/bin/cpu_avg_temp.sh}<=65} "\#f65151"     ${else}  ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=75}"\#dc322fc" ${else} ${if_match ${exec ~/bin/cpu_avg_temp.sh}>=70}"\#cb4b16"${else} "\#b58900" ${endif}${endif}  ${endif} },
 
-{ "full_text" : " ${memperc}%",        "separator":true, "separator_block_width":15, "color" : ${if_match ${memperc}>90}       "\#dc322f"  ${else} ${if_match ${memperc}>=85}"\#cb4b16" ${else} ${if_match ${memperc}>=70}"\#b58900"${else} "\#f65151" ${endif} ${endif}${endif} },
+{ "full_text" : " ${memperc}%",        "separator":false, "separator_block_width":8, "color" : ${if_match ${memperc}>90}       "\#dc322f"  ${else} ${if_match ${memperc}>=85}"\#cb4b16" ${else} ${if_match ${memperc}>=70}"\#b58900"${else} "\#f65151" ${endif} ${endif}${endif} },
+
+{ "full_text" :${if_match "${acpiacadapter ACAD}" == "on-line"}"" ${else}\
+  ${if_match ${battery_percent BAT1} >= 60}" ${battery_percent BAT1}%" ${else}\
+  ${if_match ${battery_percent BAT1} >= 50}" ${battery_percent BAT1}%" ${else}\
+  ${if_match ${battery_percent BAT1} >= 30}" ${battery_percent BAT1}%" ${else}\
+  " ${battery_percent BAT1}%"\
+  ${endif} ${endif} ${endif} ${endif}\
+,"separator":true, "separator_block_width":15, "color" : "\#f65151" },
+
 { "full_text" : ${if_up wlp3s0b1} \
                 " "\
                 ${else} 
@@ -93,8 +102,5 @@ ${endif}},
 
 
 { "full_text" :" ${time %a, %d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#f4ff42" },
-{ "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" },
-{ "full_text" :${if_match "${acpiacadapter ACAD}" == "on-line"} "" ${else} " ${battery_percent BAT1}%" ${endif},     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
-
-
+{ "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
 ],
