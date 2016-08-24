@@ -93,7 +93,8 @@ ${endif}},
 
 
 { "full_text" :" ${time %a, %d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#f4ff42" },
-{ "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
+{ "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" },
+{ "full_text" :${if_match "${acpiacadapter ACAD}" == "on-line"} "" ${else} " ${battery_percent BAT1}%" ${endif},     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
 
 
 ],

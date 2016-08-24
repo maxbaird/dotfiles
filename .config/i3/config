@@ -14,7 +14,7 @@
 #font pango: Ubuntu Mono 10 
 
 #Set Wallapaper
-exec --no-startup-id feh --bg-fill /home/maxx/Pictures/black_hole.jpg
+exec --no-startup-id feh --bg-fill /home/maxx/Pictures/black_pattern.jpg
 
 #Start Network Manager
 exec --no-startup-id nm-applet
