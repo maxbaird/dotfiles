@@ -1,7 +1,16 @@
 #!/bin/bash
 
-#Output to monitor
-xrandr --output VGA1 --right-of LVDS1 --mode 1920x1080
+if [ $# -eq 0 ]
+then
+  xrandr --output VGA1 --right-of LVDS1 --mode 1920x1080 
+else
+  if [[ "$1" == "off" ]]
+  then
+    xrandr --output VGA1 --off
+  else
+    xrandr --output VGA1 --right-of LVDS1 --mode $1 
+  fi
+fi
 
 #reset wallpaper
 ~/.fehbg
