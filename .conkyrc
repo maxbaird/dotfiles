@@ -101,6 +101,6 @@ ${if_match "${exec ~/bin/alsa_conky.sh}"==0}\
 ${endif}},
 
 
-{ "full_text" :" ${time %a, %d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#f4ff42" },
+{ "full_text" :" ${time %a,%d %b}  ${time %R}",     "separator":false, "separator_block_width":8, "color" : "\#f4ff42" },
 { "full_text" :"",     "separator":false, "separator_block_width":8, "color" : "\#FFFFFF" }
 ],
