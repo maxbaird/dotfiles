@@ -17,7 +17,7 @@
 exec --no-startup-id feh --bg-fill /home/maxx/Pictures/black_pattern.jpg
 
 #Start Network Manager
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11

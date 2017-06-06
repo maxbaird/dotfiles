@@ -53,15 +53,19 @@ setopt nosharehistory
 plugins=(git)
 
 # User configuration
-export PATH=/home/maxx/bin/mendeleydesktop-1.16.1-linux-x86_64/bin/mendeleydesktop:$PATH
+# export SACBASE=/home/maxx/sac_cmake_download
+export PATH="/home/maxx/build:/home/maxx/bin/mendeleydesktop-1.16.1-linux-x86_64/bin/mendeleydesktop:$PATH"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/ssl/lib
+
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
 
-#  export PATH="/home/mmb1/bin:/home/mmb1/bin:/home/mmb1/Downloads/sac/sac2c/bin:/home/mmb1/sac/bin:/usr/local/cuda-7.5/bin:/usr/lib64/qt-3.3/bin:/home/mmb1/bin:/home/mmb1/bin:/home/mmb1/Downloads/sac/sac2c/bin:/home/mmb1/sac/bin:/usr/local/cuda-7.5/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/mmb1/bin"
+#export PATH="/home/mmb1/bin:/home/mmb1/bin:/home/mmb1/Downloads/sac/sac2c/bin:/home/mmb1/sac/bin:/usr/local/cuda-7.5/bin:/usr/lib64/qt-3.3/bin:/home/mmb1/bin:/home/mmb1/bin:/home/mmb1/Downloads/sac/sac2c/bin:/home/mmb1/sac/bin:/usr/local/cuda-7.5/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/mmb1/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
+fortune | cowsay | lolcat
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

@@ -1,5 +1,5 @@
 xterm*faceName:DejaVu Sans Mono
-xterm*faceSize: 10
+xterm*faceSize: 10 
 xterm*saveLines: 16384
 xterm*background:Black
 xterm*foreground:Green

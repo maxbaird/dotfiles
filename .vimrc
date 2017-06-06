@@ -6,16 +6,21 @@ set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
 au BufNewFile,BufRead,BufReadPost *.sac set filetype=c
-:color desert
+au BufNewFile,BufRead,BufReadPost *.gp set filetype=gnuplot
+
+colorscheme desert "nets-away
+:syntax on
+":color desert
 "execute pathogen#infect()
 "autocmd vimenter * NERDTree
  
+:set mouse=a
 :set wrap
 :set linebreak
 :set nolist  " list disables linebreak
 
 "Spelling
-:set spell spelllang=en_gb
+":set spell spelllang=en_gb
 
 " mapping to make movements operate on 1 screen line in wrap mode
 function! ScreenMovement(movement)
@@ -35,3 +40,6 @@ nnoremap <silent> <expr> k ScreenMovement("k")
 nnoremap <silent> <expr> 0 ScreenMovement("0")
 nnoremap <silent> <expr> ^ ScreenMovement("^")
 nnoremap <silent> <expr> $ ScreenMovement("$")
+
+execute pathogen#infect()
+set laststatus=2
